@@ -1,56 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700,800" rel="stylesheet" />
-    <link rel="stylesheet" href="stlye.css">
-    <link rel="stylesheet" href="country.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700,800"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stlye.css" />
+    <link rel="stylesheet" href="country.css" />
 
     <title>Document</title>
     <script src="country.js" defer></script>
-</head>
-<body>
-    <header class = "header-container">
-        <div class = "header-content">
-            <h2 class = "title" >Where in the world?</h2>
-            <p>
-                <i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode
-            </p>
-
-        </div>
-
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-content">
+        <h2 class="title">Where in the world?</h2>
+        <p><i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode</p>
+      </div>
     </header>
 
     <main>
-
-        <div class="country-details-container">
-            <span class="back-button"><i class="fa-solid fa-arrow-left"></i>&nbsp; Back</span>
-            <div class="country-details">
-                <img src="https://flagcdn.com/is.svg">
-                <div class="details-text-container">
-                    <h1>Iceland</h1>
-                    <div class="details-text">
-                        <p><b>Native Name: </b><span class="native-name">Iceland</span></p>
-                        <p><b>Population: </b><span class="population">23423423</span></p>
-                        <p><b>Sub Region: </b><span class="sub-region">Iceland</span></p>
-                        <p><b>Region: </b><span class="region">Iceland</span></p>
-                        <p><b>Capital: </b><span class="capital">Delhi</span></p>
-                        <p><b>Top Level Domain: </b><span class="top-level-domain">Iceland</span></p>
-                        <p><b>Currencies: </b><span class="currencies">Iceland</span></p>
-                        <p><b>Languages: </b><span class="languages">Dutch, French</span></p>
-                    </div>
-                    <div class="border-countries">
-                        <b>Border Countries: </b>
-                    </div>
-                </div>
-                
+      <div class="country-details-container">
+        <span class="back-button" onclick="history.back()"
+          ><i class="fa-solid fa-arrow-left"></i>&nbsp; Back</span
+        >
+        <div class="country-details">
+          <img src="https://flagcdn.com/is.svg" />
+          <div class="details-text-container">
+            <h1>Iceland</h1>
+            <div class="details-text">
+              <p>
+                <b>Native Name: </b><span class="native-name">Iceland</span>
+              </p>
+              <p><b>Population: </b><span class="population">23423423</span></p>
+              <p><b>Sub Region: </b><span class="sub-region">Iceland</span></p>
+              <p><b>Region: </b><span class="region">Iceland</span></p>
+              <p><b>Capital: </b><span class="capital">Delhi</span></p>
+              <p>
+                <b>Top Level Domain: </b
+                ><span class="top-level-domain">Iceland</span>
+              </p>
+              <p><b>Currencies: </b><span class="currencies">Iceland</span></p>
+              <p>
+                <b>Languages: </b><span class="languages">Dutch, French</span>
+              </p>
             </div>
+            <div class="border-countries">
+              <b>Border Countries: </b>
+            </div>
+          </div>
         </div>
-
-
+      </div>
     </main>
-</body>
+  </body>
 </html>

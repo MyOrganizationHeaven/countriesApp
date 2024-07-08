@@ -1,0 +1,22 @@
+{
+  "name": "countriesapp",
+  "version": "1.0.0",
+  "description": "![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)",
+  "main": "country.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syed514-comp/countriesApp.git"
+  },
+  "author": "Syed Rashid Mujahid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syed514-comp/countriesApp/issues"
+  },
+  "homepage": "https://github.com/Syed514-comp/countriesApp#readme",
+  "devDependencies": {
+    "prettier": "^3.3.2"
+  }
+}
