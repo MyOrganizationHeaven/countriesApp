@@ -4,11 +4,29 @@
   margin-top: 32px;
 }
 
+body {
+  --background-color: white;
+  --text-color: black;
+  --elements-color: white;
+  margin: 0;
+  font-family: Nunito, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: hsl(0, 0%, 100%);
+  --elements-color: hsl(209, 23%, 22%);
+}
+
 .back-button {
   padding: 6px 24px;
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  background-color: var(--elements-color);
+  color: var(--text-color);
 }
 
 .country-details {
