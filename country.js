@@ -12,6 +12,13 @@ const languages = document.querySelector(".languages");
 const borderCountries = document.querySelector(".border-countries");
 const themeChanger = document.querySelector(".theme-changer");
 
+// Load the dark mode state from localStorage
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark");
+  themeChanger.innerHTML =
+    '<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode';
+}
+
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .then((res) => res.json())
   .then(([country]) => {
@@ -64,8 +71,10 @@ themeChanger.addEventListener("click", () => {
   if (document.body.classList.contains("dark")) {
     themeChanger.innerHTML =
       '<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode';
+    localStorage.setItem("darkMode", "enabled");
   } else {
     themeChanger.innerHTML =
       '<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode';
+    localStorage.setItem("darkMode", "disabled");
   }
 });

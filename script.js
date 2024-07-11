@@ -5,6 +5,12 @@ const themeChanger = document.querySelector(".theme-changer");
 
 let allCountriesData;
 
+
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark");
+  themeChanger.innerHTML = '<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode';
+}
+
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
   .then((data) => {
@@ -25,23 +31,21 @@ function renderCountries(data) {
     countryCard.classList.add("country-card");
     countryCard.href = `/country.html?name=${country.name.common}`;
     countryCard.innerHTML = `
-          <img src="${country.flags.svg}" alt="${country.name.common} flag" />
-          <div class="card-text">
-              <h3 class="card-title">${country.name.common}</h3>
-              <p><b>Population: </b>${country.population.toLocaleString(
-                "en-IN",
-              )}</p>
-              <p><b>Region: </b>${country.region}</p>
-              <p><b>Capital: </b>${country.capital?.[0]}</p>
-          </div>
-  `;
+      <img src="${country.flags.svg}" alt="${country.name.common} flag" />
+      <div class="card-text">
+        <h3 class="card-title">${country.name.common}</h3>
+        <p><b>Population: </b>${country.population.toLocaleString("en-IN")}</p>
+        <p><b>Region: </b>${country.region}</p>
+        <p><b>Capital: </b>${country.capital?.[0]}</p>
+      </div>
+    `;
     countriesContainer.append(countryCard);
   });
 }
 
 searchInput.addEventListener("input", (e) => {
   const filteredCountries = allCountriesData.filter((country) =>
-    country.name.common.toLowerCase().includes(e.target.value.toLowerCase()),
+    country.name.common.toLowerCase().includes(e.target.value.toLowerCase())
   );
   renderCountries(filteredCountries);
 });
@@ -49,10 +53,10 @@ searchInput.addEventListener("input", (e) => {
 themeChanger.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   if (document.body.classList.contains("dark")) {
-    themeChanger.innerHTML =
-      '<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode';
+    themeChanger.innerHTML = '<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode';
+    localStorage.setItem("darkMode", "enabled");
   } else {
-    themeChanger.innerHTML =
-      '<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode';
+    themeChanger.innerHTML = '<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode';
+    localStorage.setItem("darkMode", "disabled");
   }
 });
