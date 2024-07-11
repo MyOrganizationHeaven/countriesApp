@@ -45,3 +45,14 @@ searchInput.addEventListener("input", (e) => {
   );
   renderCountries(filteredCountries);
 });
+
+themeChanger.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    themeChanger.innerHTML =
+      '<i class="fa-regular fa-sun"></i>&nbsp;&nbsp;Light Mode';
+  } else {
+    themeChanger.innerHTML =
+      '<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode';
+  }
+});
